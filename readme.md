@@ -1,6 +1,6 @@
-- [How to migrate CSS styles used in previous versions to v22.2](#how-to-migrate-css-styles-used-in-previous-versions-to-v222)
-  - [Why we moved to our own rendering mechanism](#why-we-moved-to-our-own-rendering-mechanism)
-  - [The general approach to convert your CSS styles](#the-general-approach-to-convert-your-css-styles)
+- [How to migrate private CSS styles used in previous versions to v22.2](#how-to-migrate-private-css-styles-used-in-previous-versions-to-v222)
+  - [Why we moved Blazor compoenents to a new rendering mechanism](#why-we-moved-blazor-compoenents-to-a-new-rendering-mechanism)
+  - [How to fix layout issues that can occur in your CSS styles](#how-to-fix-layout-issues-that-can-occur-in-your-css-styles)
   - [DxGrid](#dxgrid)
     - [Hide vertical lines](#hide-vertical-lines)
     - [Color alternate rows](#color-alternate-rows)
@@ -18,20 +18,31 @@
       - [Hide a footer](#hide-a-footer)
       - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
-# How to migrate CSS styles used in previous versions to v22.2
+# How to migrate private CSS styles used in previous versions to v22.2
 
-## Why we moved to our own rendering mechanism 
-In v22.2, we changed the most of our components render. This was done for several reasons.
-Below we summurized the most often cases. For further customization via CSS, you can use the inspecting CSS rules technique, which helps determine which rules to override: 
+## Why we moved Blazor compoenents to a new rendering mechanism 
 
-## The general approach to convert your CSS styles
-In v22.2, we changed the most of our components render. This was done for several reasons.
-Below we summurized the most often cases. For further customization via CSS, you can use the inspecting CSS rules technique, which helps determine which rules to override: 
+We had the following difficulties with our previous render:
+* the necessity to create a complex render to implement an UI element that is not present in the Bootstrap framework
+* a rigid structure of UI elements that prevented creating of a lightweight component render
+* our components' layout could be broken after addinng a new release of the Bootstrap framework to a project with our components
+
+A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) in v22.2 and lay the foundation for the development of components in future versions. 
+
+## How to fix layout issues that can occur in your CSS styles
+In the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post, we described what projects can be affected by moving our components to the new render mechanism. 
+
+ Below we summurized the most often cases when our users modified our private CSS selectors to apply a style to an element. There are two ways to use this article:
+
+* you can press Ctrl+F and enter a private CSS selector that you used in a previous version. This will help you find all selectors and copy selectors that you need to use in v22.2.
+* you can use this article content and find the necessary action in this article content.
+
+If don't find the necessary selector, the general way to move your previous custom CSS styles to a new version is to inspect our component render and create CSS selectors. You can review two articles where an approach to inspect a page layout is described: 
 
 [View and change CSS](https://developer.chrome.com/docs/devtools/css/)
-[How to inspect CSS rules - DevExpress Support](https://supportcenter.devexpress.com/internal/ticket/details/k18570)
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
 
+If you don't manage to solve your issue, feel free to create a new ticket in [Support Center](http://devexpress.com/support/center). We will do our best to help you.
 
 ## DxGrid
 
