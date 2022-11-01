@@ -43,9 +43,9 @@ There are two ways to use this article:
 * you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find selectors that you used in v22.1 and copy selectors that you need to use in v22.2.
 * you can use this article content and find the necessary action in this article content.
 
-If didn't find necessary selectors, you can create a new CSS selector by inspecting a component render. There are two articles that describe how to inspect elements and get their CSS selectors: 
+If you didn't find necessary selectors, you can create a new CSS selector by inspecting a component render. There are two articles that describe how to inspect elements and get their CSS selectors: 
 
-[View and change CSS](https://developer.chrome.com/docs/devtools/css/)
+[View and change CSS](https://developer.chrome.com/docs/devtools/css/)<br/>
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
 
 If you didn't manage to write the necessary selector, feel free to create a new ticket in [Support Center](http://devexpress.com/support/center). We will help you.
