@@ -25,7 +25,7 @@
 
 In v22.1, we faced tasks that we weren't able to solve without creating a new render for our components that doesn't refer to the Bootstrap framework. 
 
-| **Task\Version**                                               | **v22.1 and below**                                                                 | **v22.2+**                                                                     |
+| **Task\Version**                                               | **v22.1 and prior**                                                                 | **v22.2+**                                                                     |
 |----------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | Add an element that is not present  in the Bootstrap framework | Requires a complex render to take  into account the Bootstrap selectors             | Require only custom styles  without complicating a DOM hierarchy               |
 | Avoid a broken layout with  a new Bootstrap release            | Requires to check(and often modify) components after a new release                    | Doesn't require any check                                        |
