@@ -1,5 +1,5 @@
-- [Updating private CSS styles used in previous versions to v22.2](#updating-private-css-styles-used-in-previous-versions-to-v222)
-  - [Reasons to move Blazor components to a new rendering mechanism](#reasons-to-move-blazor-components-to-a-new-rendering-mechanism)
+- [How to update private CSS styles used in previous versions to v22.2](#how-to-update-private-css-styles-used-in-previous-versions-to-v222)
+  - [Reasons why we moved to a new render engine and advantages of the new render](#reasons-why-we-moved-to-a-new-render-engine-and-advantages-of-the-new-render)
   - [How to use this document to migrate your previous CSS styles to styles used in v22.2](#how-to-use-this-document-to-migrate-your-previous-css-styles-to-styles-used-in-v222)
   - [DxGrid](#dxgrid)
     - [Hide vertical lines](#hide-vertical-lines)
@@ -19,17 +19,19 @@
       - [Hide a footer](#hide-a-footer)
       - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
-# Updating private CSS styles used in previous versions to v22.2
+# How to update private CSS styles used in previous versions to v22.2
 
-## Reasons to move Blazor components to a new rendering mechanism 
+## Reasons why we moved to a new render engine and advantages of the new render
 
-In v22.2, we moved to a new rendering engine of our Blazor components to avoid difficultes that we had using the Bootstrap framework:
+In v22.1, we faced tasks that we weren't able to solve without creating a new render for our components that doesn't refer to the Bootstrap framework. 
 
-* the necessity to create a complex render to implement an UI element that is not present in the Bootstrap framework
-* the impossibility to create a lightweight component render because of a rigid structure of Bootstrap CSS classes
-* the possibility to get a broken layout after upgrading a version of the Bootstrap framework
+| **Task\Version**                                               | **v22.1 and below**                                                                 | **v22.2+**                                                                     |
+|----------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| Add an element that is not present  in the Bootstrap framework | Requires a complex render to take  into account the Bootstrap selectors             | Require only custom styles  without complicating a DOM hierarchy               |
+| Avoid a broken layout with  a new Bootstrap release            | Requires to check(and often modify) components after a new release                    | Doesn't require any check                                        |
+| Lightweight a component render                                 | Can't be done because it is necessary to take into account the Bootstrap  selectors | Doesn't require to use additional containers  to meet Bootsrtap requirements |
 
-A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) in v22.2 and lay the foundation for the easier development of components in future versions. 
+A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) in v22.2 and lay the foundation for the easier and quicker development of components in future versions. 
 
 ## How to use this document to migrate your previous CSS styles to styles used in v22.2
 In the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post, we described what projects can be affected by moving our components to the new render mechanism. 
