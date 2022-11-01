@@ -36,13 +36,12 @@ A new render helped us implement [new features](https://community.devexpress.com
 ## How to use this document to migrate your previous CSS styles to styles used in v22.2
 In the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post, we described what projects can be affected by moving our components to the new render mechanism. 
 
-Below we summurized the most often cases how our users modified our private CSS selectors to apply a style to an element. 
+Below we summarized the most frequent cases of how our users modified our private CSS selectors to apply a style to an element. 
  
 There are two ways to use this article:
 
-* you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find all selectors that you used in v22.1 and copy selectors that you need to use in v22.2.
+* you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find selectors that you used in v22.1 and copy selectors that you need to use in v22.2.
 * you can use this article content and find the necessary action in this article content.
-
 
 If didn't find necessary selectors, you can create a new CSS selector by inspecting a component render. There are two articles that describe how to inspect elements and get their CSS selectors: 
 
