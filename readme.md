@@ -42,12 +42,12 @@ There are two ways to use this article:
 * you can use this article content and find the necessary action in this article content.
 
 
-If don't find the necessary selector, the general way to move your previous custom CSS selectors to a new version is to inspect our component render and create a new CSS selector. You can review two articles where an approach to inspect a page layout is described: 
+If didn't find necessary selectors, you can create a new CSS selector by inspecting a component render. There are two articles that describe how to inspect elements and get their CSS selectors: 
 
 [View and change CSS](https://developer.chrome.com/docs/devtools/css/)
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
 
-If you don't manage to write the necessary selector, feel free to create a new ticket in [Support Center](http://devexpress.com/support/center). We will do our best to help you.
+If you didn't manage to write the necessary selector, feel free to create a new ticket in [Support Center](http://devexpress.com/support/center). We will help you.
 
 ## DxGrid
 
