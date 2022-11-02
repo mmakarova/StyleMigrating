@@ -97,7 +97,7 @@ Feel free to write to our [Support Center](http://devexpress.com/support/center)
 [Return back to the table of content of the document.](#thetableofcontent)
 
 ## Most general requests based on users' requests
-
+[Return back to the table of content of the document.](#thetableofcontent)
 ### DxGrid
 
 #### Hide vertical lines
