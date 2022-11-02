@@ -79,7 +79,7 @@ Navigation:
 
 Blazor components not listed above will continue to use our current Bootstrap rendering engine. As you might expect, you can continue to use these components as you did previously
 
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ## How to use this document 
 
@@ -94,7 +94,7 @@ If you didn't manage to find your scenario in this document, you can create a ne
 
 Feel free to write to our [Support Center](http://devexpress.com/support/center). We are ready to research your specific case.
 
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ## Most general requests based on users' requests
 
@@ -143,7 +143,7 @@ In v22.2, use the following CSS rules:
     }
 
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 #### Color alternate rows
 
@@ -194,7 +194,7 @@ Another option is to handle the CustomizeElement event:
     }
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 #### Place a scrollable DxGrid to DxPopup
 
@@ -236,7 +236,7 @@ In v22.2, use the following code:
     }
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ### DxToolbar
 
@@ -297,7 +297,7 @@ In v22.2, use the following CSS rules
         justify-content: center;
     }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ### DxScheduler
 
@@ -319,7 +319,7 @@ In v22.2, use the following CSS rules
     max-width: 800px!important;
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ### DxEditors
 
@@ -327,7 +327,7 @@ In v22.2, use the following CSS rules
 
 Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply a style to DxCalendar of the DxDateEdit popup, you can write selectors for DxCalendar. To write a selector for a specific DxDateEdit, assign the DxDateEdit.DropDownCssClass property.
 
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ##### Hide a a date picker button
 
@@ -355,7 +355,7 @@ In v22.2, use the following CSS rule:
 }
 
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ##### Highlight a week on a mouse hover
 
@@ -383,7 +383,7 @@ In v22.2, use the following CSS rule:
     background-color: lightgray;
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 #### DxCalender
 
@@ -414,7 +414,7 @@ In v22.2, use the following CSS rule:
     color: black;
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ##### Hide a week number
 
@@ -443,7 +443,7 @@ In v22.2, use the following CSS rule:
 }
 
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ##### Hide a footer
 
@@ -472,7 +472,7 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ##### Hide the Today button of a footer
 
@@ -501,4 +501,4 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 ```
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
