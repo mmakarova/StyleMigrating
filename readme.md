@@ -38,6 +38,8 @@ You will find more information about the affected projects in the [Blazor — Up
 
 This document is designed to help you change your previous CSS styles to new ones. If your project is affected by upgrading to v22.2, please start with the [How to use this document](#how-to-use-this-document) section that describes how to use this document.
 
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+
 ## Affected components
 
 Changes in rendering will directly affect the following components.
@@ -76,7 +78,9 @@ Navigation:
 
 Blazor components not listed above will continue to use our current Bootstrap rendering engine. As you might expect, you can continue to use these components as you did previously
 
-## How to use this document
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+
+## How to use this document 
 
 In the [Most general requests based on users' requests](#most-general-requests-based-on-users-requests) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
  
@@ -87,7 +91,9 @@ If you didn't manage to find your scenario in this document, you can create a ne
 [View and change CSS](https://developer.chrome.com/docs/devtools/css/)<br/>
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
 
- Feel free to write to our [Support Center](http://devexpress.com/support/center). We are ready to research your specific case.
+Feel free to write to our [Support Center](http://devexpress.com/support/center). We are ready to research your specific case.
+
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ## Most general requests based on users' requests
 
@@ -136,6 +142,7 @@ In v22.2, use the following CSS rules:
     }
 
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 #### Color alternate rows
 
@@ -186,6 +193,7 @@ Another option is to handle the CustomizeElement event:
     }
 }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 #### Place a scrollable DxGrid to DxPopup
 
@@ -227,6 +235,7 @@ In v22.2, use the following code:
     }
 }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ### DxToolbar
 
@@ -287,6 +296,7 @@ In v22.2, use the following CSS rules
         justify-content: center;
     }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ### DxScheduler
 
@@ -308,12 +318,15 @@ In v22.2, use the following CSS rules
     max-width: 800px!important;
 }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ### DxEditors
 
 #### DxDateEdit 
 
 Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply a style to DxCalendar of the DxDateEdit popup, you can write selectors for DxCalendar. To write a selector for a specific DxDateEdit, assign the DxDateEdit.DropDownCssClass property.
+
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ##### Hide a a date picker button
 
@@ -341,6 +354,7 @@ In v22.2, use the following CSS rule:
 }
 
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ##### Highlight a week on a mouse hover
 
@@ -368,6 +382,7 @@ In v22.2, use the following CSS rule:
     background-color: lightgray;
 }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 #### DxCalender
 
@@ -398,6 +413,7 @@ In v22.2, use the following CSS rule:
     color: black;
 }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ##### Hide a week number
 
@@ -426,6 +442,8 @@ In v22.2, use the following CSS rule:
 }
 
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+
 ##### Hide a footer
 
 In both v22.1 and v22.2, use the same razor code:
@@ -453,6 +471,7 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 ```
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
 
 ##### Hide the Today button of a footer
 
@@ -481,4 +500,4 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 ```
-
+[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
