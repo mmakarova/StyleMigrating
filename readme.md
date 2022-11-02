@@ -87,7 +87,7 @@ If you didn't manage to find your scenario in this document, you can create a ne
 [View and change CSS](https://developer.chrome.com/docs/devtools/css/)<br/>
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
 
- Also, feel free to write to our [Support Center](http://devexpress.com/support/center). We are ready to research your specific case.
+ Feel free to write to our [Support Center](http://devexpress.com/support/center). We are ready to research your specific case.
 
 ## Most general requests based on users' requests
 
