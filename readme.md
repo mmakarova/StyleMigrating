@@ -1,3 +1,4 @@
+<a name="thetableofcontent"></a>
 - [Guide to updating CSS styles used in previous versions to v22.2](#guide-to-updating-css-styles-used-in-previous-versions-to-v222)
   - [General information](#general-information)
   - [Affected components](#affected-components)
@@ -38,7 +39,7 @@ You will find more information about the affected projects in the [Blazor — Up
 
 This document is designed to help you change your previous CSS styles to new ones. If your project is affected by upgrading to v22.2, please start with the [How to use this document](#how-to-use-this-document) section that describes how to use this document.
 
-[Return back to the table of content of the document.](https://github.com/mmakarova/StyleMigrating)
+[Return back to the table of content of the document.](#thetableofcontent)
 
 ## Affected components
 
