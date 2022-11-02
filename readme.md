@@ -1,7 +1,8 @@
-- [How to update private CSS styles used in previous versions to v22.2](#how-to-update-private-css-styles-used-in-previous-versions-to-v222)
-  - [Reasons why we moved to a new render engine and advantages of the new render](#reasons-why-we-moved-to-a-new-render-engine-and-advantages-of-the-new-render)
-  - [How to use this document to migrate your previous CSS styles to styles used in v22.2](#how-to-use-this-document-to-migrate-your-previous-css-styles-to-styles-used-in-v222)
-  - [Most ofthen requests when CSS styles should be changes](#most-ofthen-requests-when-css-styles-should-be-changes)
+- [Guide to updating CSS styles used in previous versions to v22.2](#guide-to-updating-css-styles-used-in-previous-versions-to-v222)
+  - [General information](#general-information)
+  - [Affected components](#affected-components)
+  - [How to use this document](#how-to-use-this-document)
+  - [Most general requests based on users' requests](#most-general-requests-based-on-users-requests)
     - [DxGrid](#dxgrid)
       - [Hide vertical lines](#hide-vertical-lines)
       - [Color alternate rows](#color-alternate-rows)
@@ -20,38 +21,71 @@
         - [Hide a footer](#hide-a-footer)
         - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
-# How to update private CSS styles used in previous versions to v22.2
+# Guide to updating CSS styles used in previous versions to v22.2
 
-## Reasons why we moved to a new render engine and advantages of the new render
+## General information
 
-In v22.1, we faced tasks that we weren't able to solve without creating a new render for our components that doesn't refer to the Bootstrap framework. 
+In v22.1, we faced issues with the Bootstrap framework preventing us from a further effective and quick development of our Blazor components. Among issues were the following ones:
+* the necessity to create a complex render to implement an UI element that is not present in the Bootstrap framework
+* the impossibility to create a lightweight component render because of a rigid structure of Bootstrap CSS classes
+* the possibility to get a broken layout after an upgrade to a new version of the Bootstrap framework
 
-| **Task\Version**                                               | **v22.1 and prior**                                                                 | **v22.2+**                                                                     |
-|----------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| Add an element that is not present  in the Bootstrap framework | Requires a complex render to take  into account the Bootstrap selectors             | Require only custom styles  without complicating a DOM hierarchy               |
-| Avoid a broken layout with  a new Bootstrap release            | Requires to check(and often modify) components after a new release                    | Doesn't require any check                                        |
-| Lightweight a component render                                 | Can't be done because it is necessary to take into account the Bootstrap  selectors | Doesn't require to use additional containers  to meet Bootsrtap requirements |
+This led us to the need to develop our own redering engine. In v22.2, we have implemented a new render engine for [certain components](#affected-components). A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) and lay the foundation for the easier and quicker development of components in future versions.
 
-A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) in v22.2 and lay the foundation for the easier and quicker development of components in future versions. 
+At the same time, this new rendering engine completely changes the internal visual structure of [certain Blazor](#affected-components) components. Users that previously used our private CSS styles should change them to new private CSS styles. In the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post, we described what projects can be affected by moving our components to the new render mechanism. 
 
-## How to use this document to migrate your previous CSS styles to styles used in v22.2
-In the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post, we described what projects can be affected by moving our components to the new render mechanism. 
+## Affected components
 
-Below we summarized the most frequent cases of how our users modified our private CSS selectors to apply a style to an element. 
+Changes in rendering will directly affect the following components.
+
+Major components:
+
+* DxGrid
+* DxScheduler (inner elements such as editors and buttons)
+* DxRichEdit (toolbar elements and context menus)
+
+Data Editors:
+* DxCalendar
+* DxCheckBox
+* DxComboBox
+* DxDateEdit
+* DxListBox
+* DxMaskedInput
+* DxMemo
+* DxSpinEdit
+* DxTagBox
+* DxTextBox
+* DxTimeEdit
+
+Layout:
+* DxTabs
+* DxFormLayout
+* DxPopup
+* DxDropDown
+* DxFlyout
+
+Navigation:
+* DxPager
+* DxToolbar
+* DxAccordion
+* DxContextMenu
+
+Blazor components not listed above will continue to use our current Bootstrap rendering engine. As you might expect, you can continue to use these components as you did previously
+
+## How to use this document
+
+In the [Most general requests based on users' requests](#most-general-requests-based-on-users-requests) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
  
-There are two ways to use this article:
+Also, you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find selectors that you used in v22.1 or prior and copy a new equivalent of this selector for v22.2.
 
-* you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find selectors that you used in v22.1 and copy selectors that you need to use in v22.2.
-* you can use this article content and find the necessary action in this article content.
-
-If you didn't find necessary selectors, you can create a new CSS selector by inspecting a component render. There are two articles that describe how to inspect elements and get their CSS selectors: 
+If you didn't manage to find your case in this doucment, you can create a new CSS selector by inspecting a component render : 
 
 [View and change CSS](https://developer.chrome.com/docs/devtools/css/)<br/>
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
 
-If you didn't manage to write the necessary selector, feel free to create a new ticket in [Support Center](http://devexpress.com/support/center). We will help you.
+Another option is to write to our [Support Center](http://devexpress.com/support/center). We will help you solve the task.
 
-## Most ofthen requests when CSS styles should be changes
+## Most general requests based on users' requests
 
 ### DxGrid
 
