@@ -57,7 +57,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 
 #### Hide vertical lines
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 
   ```cs
 <DxGrid Data="@forecasts" CssClass="my-grid">
@@ -67,7 +67,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
     </Columns>
 </DxGrid>
   ```
-**In v22.1, use the following CSS rules:**
+In v22.1, use the following CSS rules:
 
 ```css
 .my-grid .table-bordered td {
@@ -81,7 +81,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
         border-left: 0px;
     }
 ```
-**In v22.2, use the following CSS rules:**
+In v22.2, use the following CSS rules:
 
 ```css
 .my-grid {
@@ -101,7 +101,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 
 #### Color alternate rows
 
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```cs
 <style>
@@ -118,7 +118,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 </DxGrid>
 ```
 
-**Another option is to handle the CustomizeElement event:**
+Another option is to handle the CustomizeElement event:
 
 ```cs
 <style>
@@ -151,7 +151,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 
 #### Place a scrollable DxGrid to DxPopup
 
-**In v22.2, use the following code:**
+In v22.2, use the following code:
 
 ```css
 <style type="text/css">
@@ -194,7 +194,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 
 #### Center a toolbar item content
 
-**In both v22.1 and v22.2, use the same razor code**
+In both v22.1 and v22.2, use the same razor code
 
   ```cs
 <DxToolbar ItemRenderStyleMode="ToolbarRenderStyleMode.Contained">
@@ -226,7 +226,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
     public string SearchString { get; set; } = "";
 }
   ```
-**In v20.1, use the following CSS rules**
+In v20.1, use the following CSS rules
 
 ```css
 .btn-group.dxbs-toolbar-group:nth-child(2),
@@ -240,7 +240,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
         justify-content: center;
     }
 ```
-**In v22.2, use the following CSS rules**
+In v22.2, use the following CSS rules
 
 ```css
     .dxbl-btn-group.dxbl-toolbar-group:nth-child(2) {
@@ -254,7 +254,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 
 #### Change an edit form width
 
-**In v22.1, use the following CSS rules**
+In v22.1, use the following CSS rules
 
 ```css
 .dxbs-appointment-edit-dialog {
@@ -262,7 +262,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
     max-width: 800px!important;
 }
 ```
-**In v22.2, use the following CSS rules**
+In v22.2, use the following CSS rules
 
 ```css
 .dxbs-apt-edit-dialog {
@@ -279,7 +279,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ##### Hide a a date picker button
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 ```cs
 <DxDateEdit CssClass="my-editor-readonly" @bind-Date="@DateStart" ReadOnly="true" TimeSectionVisible="true" ></DxDateEdit>
 
@@ -288,14 +288,14 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-**In 22.1, use the following CSS rule:**
+In 22.1, use the following CSS rule:
 
 ```css
 .my-editor-readonly .dxbs-editor-input-container > input {
     display: none;
 }
 ```
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```css
 .my-editor-readonly .dxbl-btn-group {
@@ -306,7 +306,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ##### Highlight a week on a mouse hover
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 ```cs
 <DxDateEdit @bind-Date="@DateStart" DropDownCssClass="customDateEdit">
 </DxDateEdit>
@@ -316,14 +316,14 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-**In v22.1, use the following CSS rule:**
+In v22.1, use the following CSS rule:
 
 ```css
 .customDateEdit .dxbs-calendar-table tr:hover {
     background-color: lightgray;
 }
 ```
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```css
 .customDateEdit .dxbl-calendar-week-row:hover {
@@ -335,7 +335,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ##### Change a font color of weekend
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 ```cs
 <DxCalendar SelectedDate="@DateStart"  CssClass="myCalendarCss"></DxCalendar>
 
@@ -345,7 +345,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ```
 
-**In 22.1, use the following CSS rule:**
+In 22.1, use the following CSS rule:
 
 ```css
 .myCalendarCss .dxbs-weekend {
@@ -353,7 +353,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 
 ```
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```css
 .myCalendarCss .dxbl-calendar-day.dxbl-calendar-weekend {
@@ -363,7 +363,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ##### Hide a week number
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 ```cs
 <DxCalendar SelectedDate="@DateStart"></DxCalendar>
 
@@ -372,7 +372,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-**In v19.2, use the following CSS rule:**
+In v19.2, use the following CSS rule:
 
 ```css
 .dxbs-calendar td:not(.dxbs-day) {
@@ -380,7 +380,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 
 ```
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```css
 .dxbl-calendar-week-number {
@@ -390,7 +390,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 ```
 ##### Hide a footer
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 ```cs
 <DxCalendar SelectedDate="@DateStart" CssClass="customCalendar"></DxCalendar>
 
@@ -399,7 +399,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-**In v22.1, use the following CSS rule:**
+In v22.1, use the following CSS rule:
 
 ```css
 .customCalendar .dxbs-calendar-footer {
@@ -408,7 +408,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 
 ```
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```css
 .customCalendar .dxbl-calendar-footer {
@@ -418,7 +418,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ##### Hide the Today button of a footer
 
-**In both v22.1 and v22.2, use the same razor code:**
+In both v22.1 and v22.2, use the same razor code:
 ```cs
 <DxCalendar SelectedDate="@DateStart" CssClass="customCalendar"></DxCalendar>
 
@@ -427,7 +427,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-**In v22.1, use the following CSS rule:**
+In v22.1, use the following CSS rule:
 
 ```css
 .customCalendar .dxbs-calendar-footer > button:first-child {
@@ -436,7 +436,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 
 ```
-**In v22.2, use the following CSS rule:**
+In v22.2, use the following CSS rule:
 
 ```css
 .customCalendar .dxbl-calendar-footer > button:first-child {
