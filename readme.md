@@ -1,23 +1,24 @@
 - [How to update private CSS styles used in previous versions to v22.2](#how-to-update-private-css-styles-used-in-previous-versions-to-v222)
   - [Reasons why we moved to a new render engine and advantages of the new render](#reasons-why-we-moved-to-a-new-render-engine-and-advantages-of-the-new-render)
   - [How to use this document to migrate your previous CSS styles to styles used in v22.2](#how-to-use-this-document-to-migrate-your-previous-css-styles-to-styles-used-in-v222)
-  - [DxGrid](#dxgrid)
-    - [Hide vertical lines](#hide-vertical-lines)
-    - [Color alternate rows](#color-alternate-rows)
-    - [Place a scrollable DxGrid to DxPopup](#place-a-scrollable-dxgrid-to-dxpopup)
-  - [DxToolbar](#dxtoolbar)
-    - [Center a toolbar item content](#center-a-toolbar-item-content)
-  - [DxScheduler](#dxscheduler)
-    - [Change an edit form width](#change-an-edit-form-width)
-  - [DxEditors](#dxeditors)
-    - [DxDateEdit](#dxdateedit)
-      - [Hide a a date picker button](#hide-a-a-date-picker-button)
-      - [Highlight a week on a mouse hover](#highlight-a-week-on-a-mouse-hover)
-    - [DxCalender](#dxcalender)
-      - [Change a font color of weekend](#change-a-font-color-of-weekend)
-      - [Hide a week number](#hide-a-week-number)
-      - [Hide a footer](#hide-a-footer)
-      - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
+  - [Most ofthen requests when CSS styles should be changes](#most-ofthen-requests-when-css-styles-should-be-changes)
+    - [DxGrid](#dxgrid)
+      - [Hide vertical lines](#hide-vertical-lines)
+      - [Color alternate rows](#color-alternate-rows)
+      - [Place a scrollable DxGrid to DxPopup](#place-a-scrollable-dxgrid-to-dxpopup)
+    - [DxToolbar](#dxtoolbar)
+      - [Center a toolbar item content](#center-a-toolbar-item-content)
+    - [DxScheduler](#dxscheduler)
+      - [Change an edit form width](#change-an-edit-form-width)
+    - [DxEditors](#dxeditors)
+      - [DxDateEdit](#dxdateedit)
+        - [Hide a a date picker button](#hide-a-a-date-picker-button)
+        - [Highlight a week on a mouse hover](#highlight-a-week-on-a-mouse-hover)
+      - [DxCalender](#dxcalender)
+        - [Change a font color of weekend](#change-a-font-color-of-weekend)
+        - [Hide a week number](#hide-a-week-number)
+        - [Hide a footer](#hide-a-footer)
+        - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
 # How to update private CSS styles used in previous versions to v22.2
 
@@ -50,9 +51,11 @@ If you didn't find necessary selectors, you can create a new CSS selector by ins
 
 If you didn't manage to write the necessary selector, feel free to create a new ticket in [Support Center](http://devexpress.com/support/center). We will help you.
 
-## DxGrid
+## Most ofthen requests when CSS styles should be changes
 
-### Hide vertical lines
+### DxGrid
+
+#### Hide vertical lines
 
 **In both v22.1 and v22.2, use the same razor code:**
 
@@ -96,7 +99,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 
 ```
 
-### Color alternate rows
+#### Color alternate rows
 
 **In v22.2, use the following CSS rule:**
 
@@ -146,7 +149,7 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 }
 ```
 
-### Place a scrollable DxGrid to DxPopup
+#### Place a scrollable DxGrid to DxPopup
 
 **In v22.2, use the following code:**
 
@@ -187,9 +190,9 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 }
 ```
 
-## DxToolbar
+### DxToolbar
 
-### Center a toolbar item content
+#### Center a toolbar item content
 
 **In both v22.1 and v22.2, use the same razor code**
 
@@ -247,9 +250,9 @@ If you didn't manage to write the necessary selector, feel free to create a new 
     }
 ```
 
-## DxScheduler
+### DxScheduler
 
-### Change an edit form width
+#### Change an edit form width
 
 **In v22.1, use the following CSS rules**
 
@@ -268,13 +271,13 @@ If you didn't manage to write the necessary selector, feel free to create a new 
 }
 ```
 
-## DxEditors
+### DxEditors
 
-### DxDateEdit 
+#### DxDateEdit 
 
 Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply a style to DxCalendar of the DxDateEdit popup, you can write selectors for DxCalendar. To write a selector for a specific DxDateEdit, assign the DxDateEdit.DropDownCssClass property.
 
-#### Hide a a date picker button
+##### Hide a a date picker button
 
 **In both v22.1 and v22.2, use the same razor code:**
 ```cs
@@ -301,7 +304,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 
 ```
 
-#### Highlight a week on a mouse hover
+##### Highlight a week on a mouse hover
 
 **In both v22.1 and v22.2, use the same razor code:**
 ```cs
@@ -328,9 +331,9 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-### DxCalender
+#### DxCalender
 
-#### Change a font color of weekend
+##### Change a font color of weekend
 
 **In both v22.1 and v22.2, use the same razor code:**
 ```cs
@@ -358,7 +361,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-#### Hide a week number
+##### Hide a week number
 
 **In both v22.1 and v22.2, use the same razor code:**
 ```cs
@@ -385,7 +388,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 
 ```
-#### Hide a footer
+##### Hide a footer
 
 **In both v22.1 and v22.2, use the same razor code:**
 ```cs
@@ -413,7 +416,7 @@ Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply 
 }
 ```
 
-#### Hide the Today button of a footer
+##### Hide the Today button of a footer
 
 **In both v22.1 and v22.2, use the same razor code:**
 ```cs
