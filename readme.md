@@ -25,18 +25,18 @@
 
 ## General information
 
-In v22.1, we faced issues with the Bootstrap framework preventing us from a further effective and quick development of our Blazor components. Among issues were the following ones:
-* the necessity to create a complex render to implement an UI element that is not present in the Bootstrap framework
-* the impossibility to create a lightweight component render because of a rigid structure of Bootstrap CSS classes
-* the possibility to get a broken layout after an upgrade to a new version of the Bootstrap framework
+In v22.1, we encountered issues with the Bootstrap framework preventing us from further effective and quick development of our Blazor components. Among these issues were the following :
+* The necessity to create a complex render to implement an UI element that is not present in the Bootstrap framework.
+* The impossibility to create a lightweight component render because of the rigid structure of Bootstrap CSS classes.
+* The possibility to get a broken layout after an upgrade to a new version of the Bootstrap framework
 
-This led us to the need to develop our own redering engine. In v22.2, we have implemented a new render engine for [certain components](#affected-components). A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) and lay the foundation for the easier and quicker development of components in future versions.
+The led us to the need to develop our own rendering engine. In v22.2, we have implemented a new render engine for [certain components](#affected-components). The new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) and lay the foundation for the easier and quicker development of components in future versions.
 
-At the same time, this new rendering engine completely changes the internal visual structure of [certain Blazor](#affected-components) components. Users that previously used our CSS styles should change them to new CSS styles. 
+At the same time, this new rendering engine completely changes the internal visual structure of [certain Blazor](#affected-components) components. Users that used our previous CSS styles should change them to new CSS styles. 
 
-More information about the affected projects, you will find in the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post.
+You will find more information about the affected projects in the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx).
 
-This document is designed to help you change your previous CSS styles to new ones. If your project is affected by upgrading to v22.2. Please start with the [How to use this document](#how-to-use-this-document) section that describes how to use this document.
+This document is designed to help you change your previous CSS styles to new ones. If your project is affected by upgrading to v22.2, please start with the [How to use this document](#how-to-use-this-document) section that describes how to use this document.
 
 ## Affected components
 
@@ -80,9 +80,9 @@ Blazor components not listed above will continue to use our current Bootstrap re
 
 In the [Most general requests based on users' requests](#most-general-requests-based-on-users-requests) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
  
-Also, you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find a selector that you used in v22.1 or prior and copy a new equivalent of this selector.
+Also, you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find a selector that you used in v22.1 or prior, and copy the new equivalent of this selector.
 
-If you didn't manage to find your case in this doucment, you can create a new CSS selector by inspecting a component render like described in the following articles: 
+If you didn't manage to find your scenario in this document, you can create a new CSS selector by inspecting a component render as described in the following articles: 
 
 [View and change CSS](https://developer.chrome.com/docs/devtools/css/)<br/>
 [How to implement CSS-related solutions for DevExpress components](https://supportcenter.devexpress.com/internal/ticket/details/T632424)
