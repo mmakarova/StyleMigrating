@@ -32,7 +32,11 @@ In v22.1, we faced issues with the Bootstrap framework preventing us from a furt
 
 This led us to the need to develop our own redering engine. In v22.2, we have implemented a new render engine for [certain components](#affected-components). A new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) and lay the foundation for the easier and quicker development of components in future versions.
 
-At the same time, this new rendering engine completely changes the internal visual structure of [certain Blazor](#affected-components) components. Users that previously used our private CSS styles should change them to new private CSS styles. In the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post, we described what projects can be affected by moving our components to the new render mechanism. 
+At the same time, this new rendering engine completely changes the internal visual structure of [certain Blazor](#affected-components) components. Users that previously used our private CSS styles should change them to new private CSS styles. 
+
+More information about the affected projects, you will find in the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) blog post.
+
+This document is designed to help you change your previous CSS styles to new ones. If your project is affected by upgrading to v22.2. Please start with the [How to use this document](#how-to-use-this-document) section that describes how to use this document.
 
 ## Affected components
 
