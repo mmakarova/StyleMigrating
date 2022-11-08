@@ -7,7 +7,7 @@
     - [DxGrid](#dxgrid)
       - [Hide vertical lines](#hide-vertical-lines)
       - [Color alternate rows](#color-alternate-rows)
-      - [Place a scrollable DxGrid to DxPopup](#place-a-scrollable-dxgrid-to-dxpopup)
+      - [Place a scrollable DxGrid into DxPopup](#place-a-scrollable-dxgrid-into-dxpopup)
     - [DxToolbar](#dxtoolbar)
       - [Center a toolbar item content](#center-a-toolbar-item-content)
     - [DxScheduler](#dxscheduler)
@@ -147,24 +147,7 @@ In v22.2, use the following CSS rules:
 
 #### Color alternate rows
 
-In v22.2, use the following CSS rule:
-
-```cs
-<style>
-    .my-grid .dxbl-grid-table > tbody > tr:nth-child(2n+1) {
-        background-color: lightgray;
-    }
-</style>
-
-<DxGrid Data="@forecasts" CssClass="my-grid">
-    <Columns>
-        <DxGridDataColumn Caption="Date" FieldName="Date" />
-        <DxGridDataColumn Caption="Temperature" FieldName="TemperatureF" />
-    </Columns>
-</DxGrid>
-```
-
-Another option is to handle the CustomizeElement event:
+The universal approach to color alternate rows is to handle the CustomizeElement event:
 
 ```cs
 <style>
@@ -194,9 +177,27 @@ Another option is to handle the CustomizeElement event:
     }
 }
 ```
+
+At the samle time, to color DxGrid rows without the master-detail relationship and grouping. 
+In v22.2, use the following CSS rule:
+```cs
+<style>
+    .my-grid .dxbl-grid-table > tbody > tr:nth-child(2n+1) {
+        background-color: lightgray;
+    }
+</style>
+
+<DxGrid Data="@forecasts" CssClass="my-grid">
+    <Columns>
+        <DxGridDataColumn Caption="Date" FieldName="Date" />
+        <DxGridDataColumn Caption="Temperature" FieldName="TemperatureF" />
+    </Columns>
+</DxGrid>
+```
+
 [Return back to the table of content of the document.](#thetableofcontent)
 
-#### Place a scrollable DxGrid to DxPopup
+#### Place a scrollable DxGrid into DxPopup
 
 In v22.2, use the following code:
 
