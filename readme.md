@@ -3,7 +3,7 @@
   - [General information](#general-information)
   - [Affected components](#affected-components)
   - [How to use this document](#how-to-use-this-document)
-  - [Most general requests based on users' requests](#most-general-requests-based-on-users-requests)
+  - [Most general requests](#most-general-requests)
     - [DxGrid](#dxgrid)
       - [Hide vertical lines](#hide-vertical-lines)
       - [Color alternate rows](#color-alternate-rows)
@@ -96,7 +96,7 @@ Feel free to write to our [Support Center](http://devexpress.com/support/center)
 
 [Return back to the table of content of the document.](#thetableofcontent)
 
-## Most general requests based on users' requests
+## Most general requests
 [Return back to the table of content of the document.](#thetableofcontent)
 ### DxGrid
 
