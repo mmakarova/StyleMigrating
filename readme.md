@@ -1,6 +1,5 @@
-<span style="font-size:2.5em;font-weight: bold;color:black;">How to update CSS styles to v22.2</font>
 <a name="thetableofcontents"></a>
-- [How to use this document](#how-to-use-this-document)
+- [How to update CSS styles to v22.2](#how-to-update-css-styles-to-v222)
 - [Most common customizations](#most-common-customizations)
   - [DxGrid](#dxgrid)
     - [Hide vertical lines](#hide-vertical-lines)
@@ -20,7 +19,7 @@
       - [Hide a footer](#hide-a-footer)
       - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
-# How to use this document
+# How to update CSS styles to v22.2
 
 In the [Most common customizations](#most-common-customizations) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
  
