@@ -1,6 +1,5 @@
 <a name="thetableofcontents"></a>
 - [How to update CSS styles of previous versions to v22.2](#how-to-update-css-styles-of-previous-versions-to-v222)
-  - [How to use this document](#how-to-use-this-document)
   - [Most common customizations](#most-common-customizations)
     - [DxGrid](#dxgrid)
       - [Hide vertical lines](#hide-vertical-lines)
@@ -21,8 +20,6 @@
         - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
 # How to update CSS styles of previous versions to v22.2
-
-## How to use this document 
 
 In the [Most common customizations](#most-common-customizations) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
  
