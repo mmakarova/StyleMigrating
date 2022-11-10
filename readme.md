@@ -14,6 +14,7 @@
   - [DxEditors](#dxeditors)
     - [DxDateEdit](#dxdateedit)
       - [Hide a a date picker button](#hide-a-a-date-picker-button)
+      - [Localize the Time section scroll picker's text](#localize-the-time-section-scroll-pickers-text)
       - [Highlight a week on a mouse hover](#highlight-a-week-on-a-mouse-hover)
     - [DxCalender](#dxcalender)
       - [Change a font color of weekend](#change-a-font-color-of-weekend)
@@ -351,6 +352,71 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 
+```
+[Return to the table of contents.](#thetableofcontents)
+
+#### Localize the Time section scroll picker's text
+
+In both v22.1 and v22.2, use the same razor code:
+
+```cs
+<DxDateEdit @bind-Date="@DateTimeValue"
+            TimeSectionVisible="true" DropDownBodyCssClass="my-drop-down-body"   DropDownVisibleChanged="OnDropDownVisibleChanged"
+            CssClass="cw-320" />
+
+@code {
+    DateTime DateTimeValue { get; set; } = DateTime.Now.AddHours(-7);
+    void OnDropDownVisibleChanged(bool isVisible)
+    {
+        if (isVisible)
+            JSRuntime.InvokeVoidAsync("updateRoller", "heure", "m", "seconde");
+    }
+}
+```
+In 22.1, use the following script:
+
+```js
+var dropDownBody, localizedHour, localizedMinute,localizedSecond;
+function updateRoller(hour, minute, second) {
+    localizedHour = hour;
+    localizedMinute = minute;
+    localizedSecond = second;
+    setTimeout(function() {
+        dropDownBody = document.querySelector(".my-drop-down-body");
+        var tabHeader = dropDownBody.querySelector(".dxbs-date-time-edit-dropdown-tabs-time");
+        tabHeader.onclick  = function() {
+            setTimeout(function() {
+                var captions = dropDownBody.querySelectorAll(".roller-title");
+                captions[0].innerText = hour;
+                captions[1].innerText = minute;
+                captions[2].innerText = second;
+            }, 300);
+        }
+    }, 700);
+}
+```
+
+In v22.2, use the following script:
+
+```js
+var dropDownBody, localizedHour, localizedMinute,localizedSecond;
+function updateRoller(hour, minute, second) {
+    localizedHour = hour;
+    localizedMinute = minute;
+    localizedSecond = second;
+    setTimeout(function() {
+        dropDownBody = document.querySelector(".my-drop-down-body");
+        var tabHeader = dropDownBody.querySelector(".dxbl-date-time-edit-tabs");
+        tabHeader.onclick  = function() {
+            setTimeout(function() {
+                var captions = dropDownBody.querySelectorAll(".dxbl-roller-title");
+                captions[0].innerText = hour;
+                captions[1].innerText = minute;
+                captions[2].innerText = second;
+            }, 300);
+        }
+    }, 700);
+}
 ```
 [Return to the table of contents.](#thetableofcontents)
 
