@@ -55,7 +55,7 @@ In both v22.1 and v22.2, use the same razor code:
     </Columns>
 </DxGrid>
   ```
-v22.1 CSS rules:
+In v22.1, use the following CSS rules:
 
 ```css
 .my-grid .table-bordered td {
@@ -69,7 +69,7 @@ v22.1 CSS rules:
         border-left: 0px;
     }
 ```
-v22.2 CSS rules:
+In v22.2, use the following CSS rules:
 
 ```css
 .my-grid {
