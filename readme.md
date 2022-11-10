@@ -1,4 +1,4 @@
-<a name="thetableofcontent"></a>
+<a name="thetableofcontents"></a>
 - [How to update CSS styles of previous versions to v22.2](#how-to-update-css-styles-of-previous-versions-to-v222)
   - [How to use this document](#how-to-use-this-document)
   - [Most common customizations](#most-common-customizations)
@@ -35,7 +35,7 @@ If you didn't manage to find your scenario in this document, you can create a ne
 
 Feel free to write to our [Support Center](http://devexpress.com/support/center). We are ready to research your specific case.
 
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ## Most common customizations
 
@@ -84,7 +84,7 @@ v22.2 CSS rules:
     }
 
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 #### Color alternate rows
 
@@ -136,7 +136,7 @@ In v22.2, use the following CSS rule:
 </DxGrid>
 ```
 
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 #### Place a scrollable DxGrid into DxPopup
 
@@ -178,7 +178,7 @@ In v22.2, use the following code:
     }
 }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ### DxToolbar
 
@@ -239,7 +239,7 @@ In v22.2, use the following CSS rules:
         justify-content: center;
     }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ### DxScheduler
 
@@ -261,7 +261,7 @@ In v22.2, use the following CSS rules:
     max-width: 800px!important;
 }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ### DxEditors
 
@@ -269,7 +269,7 @@ In v22.2, use the following CSS rules:
 
 Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply a style to DxCalendar of the DxDateEdit popup, you can write selectors for DxCalendar. To write a selector for a specific DxDateEdit, assign the DxDateEdit.DropDownCssClass property.
 
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ##### Hide a a date picker button
 
@@ -297,7 +297,7 @@ In v22.2, use the following CSS rule:
 }
 
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ##### Highlight a week on a mouse hover
 
@@ -325,7 +325,7 @@ In v22.2, use the following CSS rule:
     background-color: lightgray;
 }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 #### DxCalender
 
@@ -356,7 +356,7 @@ In v22.2, use the following CSS rule:
     color: black;
 }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ##### Hide a week number
 
@@ -385,7 +385,7 @@ In v22.2, use the following CSS rule:
 }
 
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ##### Hide a footer
 
@@ -414,7 +414,7 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
 
 ##### Hide the Today button of a footer
 
@@ -443,4 +443,4 @@ In v22.2, use the following CSS rule:
     display: none;
 }
 ```
-[Return back to the table of content of the document.](#thetableofcontent)
+[Return to the table of contents.](#thetableofcontents)
