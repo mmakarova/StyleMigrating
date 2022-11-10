@@ -21,6 +21,8 @@
       - [Hide a week number](#hide-a-week-number)
       - [Hide a footer](#hide-a-footer)
       - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
+  - [DxPopup](#dxpopup)
+    - [Customize the Close header button's icon](#customize-the-close-header-buttons-icon)
 
 # How to update CSS styles to v22.2
 
@@ -566,9 +568,9 @@ In v22.2, use the following CSS rule:
 ```
 [Return to the table of contents.](#thetableofcontents)
 
-##DxPopup
+## DxPopup
 
-###Customize the Close header button's icon
+### Customize the Close header button's icon
 
 In both v22.1 and v22.2, use the same razor code:
 
