@@ -1,4 +1,4 @@
-<font size='10'>How to update CSS styles to v22.2</font>
+<span style="font-size:2.5em;font-weight: bold;color:black;">How to update CSS styles to v22.2</font>
 <a name="thetableofcontents"></a>
 - [How to use this document](#how-to-use-this-document)
 - [Most common customizations](#most-common-customizations)
