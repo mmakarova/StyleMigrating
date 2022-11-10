@@ -1,9 +1,7 @@
 <a name="thetableofcontent"></a>
-- [Guide to updating CSS styles used in previous versions to v22.2](#guide-to-updating-css-styles-used-in-previous-versions-to-v222)
-  - [General information](#general-information)
-  - [Affected components](#affected-components)
+- [How to update CSS styles of previous versions to v22.2](#how-to-update-css-styles-of-previous-versions-to-v222)
   - [How to use this document](#how-to-use-this-document)
-  - [Most general requests](#most-general-requests)
+  - [Most common customizations](#most-common-customizations)
     - [DxGrid](#dxgrid)
       - [Hide vertical lines](#hide-vertical-lines)
       - [Color alternate rows](#color-alternate-rows)
@@ -22,68 +20,11 @@
         - [Hide a footer](#hide-a-footer)
         - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
 
-# Guide to updating CSS styles used in previous versions to v22.2
-
-## General information
-
-In v22.1, we encountered issues with the Bootstrap framework preventing us from further effective and quick development of our Blazor components. Among these issues were the following :
-* The necessity to create a complex render to implement an UI element that is not present in the Bootstrap framework.
-* The impossibility to create a lightweight component render because of the rigid structure of Bootstrap CSS classes.
-* The possibility to get a broken layout after an upgrade to a new version of the Bootstrap framework
-
-The led us to the need to develop our own rendering engine. In v22.2, we have implemented a new render engine for [certain components](#affected-components). The new render helped us implement [new features](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx) and lay the foundation for the easier and quicker development of components in future versions.
-
-At the same time, this new rendering engine completely changes the internal visual structure of [certain Blazor](#affected-components) components. Users that used our previous CSS styles should change them to new CSS styles. 
-
-You will find more information about the affected projects in the [Blazor — Upcoming Breaking Changes in Rendering and Bootstrap Support (v22.2)](https://community.devexpress.com/blogs/aspnet/archive/2022/10/13/blazor-upcoming-breaking-changes-in-rendering-and-bootstrap-support-v22-2.aspx).
-
-This document is designed to help you change your previous CSS styles to new ones. If your project is affected by upgrading to v22.2, please start with the [How to use this document](#how-to-use-this-document) section that describes how to use this document.
-
-[Return back to the table of content of the document.](#thetableofcontent)
-
-## Affected components
-
-Changes in rendering will directly affect the following components.
-
-Major components:
-
-* DxGrid
-* DxScheduler (inner elements such as editors and buttons)
-* DxRichEdit (toolbar elements and context menus)
-
-Data Editors:
-* DxCalendar
-* DxCheckBox
-* DxComboBox
-* DxDateEdit
-* DxListBox
-* DxMaskedInput
-* DxMemo
-* DxSpinEdit
-* DxTagBox
-* DxTextBox
-* DxTimeEdit
-
-Layout:
-* DxTabs
-* DxFormLayout
-* DxPopup
-* DxDropDown
-* DxFlyout
-
-Navigation:
-* DxPager
-* DxToolbar
-* DxAccordion
-* DxContextMenu
-
-Blazor components not listed above will continue to use our current Bootstrap rendering engine. As you might expect, you can continue to use these components as you did previously
-
-[Return back to the table of content of the document.](#thetableofcontent)
+# How to update CSS styles of previous versions to v22.2
 
 ## How to use this document 
 
-In the [Most general requests based on users' requests](#most-general-requests-based-on-users-requests) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
+In the [Most common customizations](#most-common-customizations) section of this repository, we summarized the most often cases when our users should use our private CSS selectors to apply a style to an element. 
  
 Also, you can press Ctrl+F and search for a private CSS selector that you used in a previous version. This will help you find a selector that you used in v22.1 or prior, and copy the new equivalent of this selector.
 
@@ -96,8 +37,8 @@ Feel free to write to our [Support Center](http://devexpress.com/support/center)
 
 [Return back to the table of content of the document.](#thetableofcontent)
 
-## Most general requests
-[Return back to the table of content of the document.](#thetableofcontent)
+## Most common customizations
+
 ### DxGrid
 
 #### Hide vertical lines
@@ -112,7 +53,7 @@ In both v22.1 and v22.2, use the same razor code:
     </Columns>
 </DxGrid>
   ```
-In v22.1, use the following CSS rules:
+v22.1 CSS rules:
 
 ```css
 .my-grid .table-bordered td {
@@ -126,7 +67,7 @@ In v22.1, use the following CSS rules:
         border-left: 0px;
     }
 ```
-In v22.2, use the following CSS rules:
+v22.2 CSS rules:
 
 ```css
 .my-grid {
@@ -243,7 +184,7 @@ In v22.2, use the following code:
 
 #### Center a toolbar item content
 
-In both v22.1 and v22.2, use the same razor code
+In both v22.1 and v22.2, use the same razor code:
 
   ```cs
 <DxToolbar ItemRenderStyleMode="ToolbarRenderStyleMode.Contained">
@@ -275,7 +216,7 @@ In both v22.1 and v22.2, use the same razor code
     public string SearchString { get; set; } = "";
 }
   ```
-In v20.1, use the following CSS rules
+In v20.1, use the following CSS rules:
 
 ```css
 .btn-group.dxbs-toolbar-group:nth-child(2),
@@ -289,7 +230,7 @@ In v20.1, use the following CSS rules
         justify-content: center;
     }
 ```
-In v22.2, use the following CSS rules
+In v22.2, use the following CSS rules:
 
 ```css
     .dxbl-btn-group.dxbl-toolbar-group:nth-child(2) {
@@ -304,7 +245,7 @@ In v22.2, use the following CSS rules
 
 #### Change an edit form width
 
-In v22.1, use the following CSS rules
+In v22.1, use the following CSS rules:
 
 ```css
 .dxbs-appointment-edit-dialog {
@@ -312,7 +253,7 @@ In v22.1, use the following CSS rules
     max-width: 800px!important;
 }
 ```
-In v22.2, use the following CSS rules
+In v22.2, use the following CSS rules:
 
 ```css
 .dxbs-apt-edit-dialog {
