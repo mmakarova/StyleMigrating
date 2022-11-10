@@ -499,3 +499,45 @@ In v22.2, use the following CSS rule:
 }
 ```
 [Return to the table of contents.](#thetableofcontents)
+
+##DxPopup
+
+###Customize the Close header button's icon
+
+In both v22.1 and v22.2, use the same razor code:
+
+```cs
+<DxPopup HeaderText="Header" @bind-Visible="@PopupVisible" CssClass="customPopup">
+    <Content>
+       ...
+    </Content>
+</DxPopup>
+```
+
+In 22.1, use the following CSS rule:
+```css
+.customPopup .dxbs-popup-header-button{
+    content: "icn";
+    color: transparent;
+    display: inline-block;
+    background-image: url("/images/facebook_icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.customPopup .dxbs-popup-header-button svg {
+    display: none;
+}
+```
+
+In v22.2, use the following CSS rule:
+```css
+.customPopup .dxbl-popup-header-button .dxbl-image {
+    content: "icn";
+    color: transparent;
+    display: inline-block;
+    background-image: url("/images/facebook_icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+```
+[Return to the table of contents.](#thetableofcontents)
