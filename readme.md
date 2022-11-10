@@ -7,6 +7,8 @@
     - [Place a scrollable DxGrid into DxPopup](#place-a-scrollable-dxgrid-into-dxpopup)
   - [DxToolbar](#dxtoolbar)
     - [Center a toolbar item content](#center-a-toolbar-item-content)
+  - [DxTabs](#dxtabs)
+    - [Make tabs rounded](#make-tabs-rounded)
   - [DxScheduler](#dxscheduler)
     - [Change an edit form width](#change-an-edit-form-width)
   - [DxEditors](#dxeditors)
@@ -234,6 +236,62 @@ In v22.2, use the following CSS rules:
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+```
+[Return to the table of contents.](#thetableofcontents)
+
+## DxTabs
+
+### Make tabs rounded
+
+In both v22.1 and v22.2, use the same razor code:
+```cs
+<DxTabs CssClass="MyTabsCss">
+  <DxTab Text="Home" CssClass="MyTabCss"></DxTab>
+  <DxTab Text="Products" CssClass="MyTabCss"></DxTab>
+  <DxTab Text="Support" CssClass="MyTabCss"></DxTab>
+</DxTabs>
+```
+
+In v22.1, use the follwing CSS rules:
+```css
+.MyTabsCss > ul {
+        border-bottom-width: 0px;
+    }
+    .MyTabCss > a {
+        border-radius: 20px !important;
+        border: 1px solid white !important;
+    }
+
+        .MyTabCss > a:hover {
+            border-color: #e9ecef !important;
+        }
+
+        .MyTabCss > a.active {
+            border-color: dodgerblue !important;
+            background-color: dodgerblue !important;
+        }
+```
+In v22.2, use the follwing CSS rules:
+```css
+.MyTabsCss {
+    border-bottom-width:0px;
+}
+.MyTabCss  {
+    border-radius: 20px !important;
+    border: 1px solid white !important;
+}
+
+    .MyTabCss:hover {
+        border-color: #e9ecef !important;
+    }
+
+    .MyTabCss.dxbl-active {
+        border-color: dodgerblue !important;
+        background-color: dodgerblue !important;
+    }
+    .MyTabCss.dxbl-active:after {
+        background-color:transparent!important;
     }
 ```
 [Return to the table of contents.](#thetableofcontents)
