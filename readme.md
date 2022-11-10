@@ -12,6 +12,8 @@
   - [DxScheduler](#dxscheduler)
     - [Change an edit form width](#change-an-edit-form-width)
   - [DxEditors](#dxeditors)
+    - [DxComboBox](#dxcombobox)
+      - [Modify the "No data to display" message](#modify-the-no-data-to-display-message)
     - [DxDateEdit](#dxdateedit)
       - [Hide a a date picker button](#hide-a-a-date-picker-button)
       - [Localize the Time section scroll picker's text](#localize-the-time-section-scroll-pickers-text)
@@ -322,6 +324,54 @@ In v22.2, use the following CSS rules:
 [Return to the table of contents.](#thetableofcontents)
 
 ## DxEditors
+
+### DxComboBox 
+
+#### Modify the "No data to display" message
+
+In v19.2 use the following code:
+
+```cs
+<style>
+    .MyComboBox .dxbs-empty-data-row {
+        color: transparent;
+        width: 300px;
+        user-select:none;
+    }
+.MyComboBox .dxbs-empty-data-row:before {
+      position: absolute;
+      content: 'This is my looooong text';
+      color: #212529;
+      font: inherit;
+      width: 100%;
+      left: 0;
+}
+</style>
+<DxComboBox Data="@MyList" CssClass="MyComboBox"   FilteringMode="@DataGridFilteringMode.Contains"   AllowUserInput="true">
+</DxComboBox>
+```
+
+In 22.1, use the following code:
+
+```cs
+ .dxbl-listbox-empty-data-item {
+        color: transparent;
+        width: 300px;
+        user-select: none;
+    }
+    .dxbl-listbox-empty-data-item:before {
+            position: absolute;
+            content: 'Custom text';
+            color: #212529;
+            font: inherit;
+            width: 100%;
+            left: 0;
+    }
+
+<DxComboBox Data="@MyList"   FilteringMode="@DataGridFilteringMode.Contains"   AllowUserInput="true">
+</DxComboBox>
+```
+[Return to the table of contents.](#thetableofcontents)
 
 ### DxDateEdit 
 
