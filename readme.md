@@ -351,24 +351,25 @@ In v19.2 use the following code:
 </DxComboBox>
 ```
 
-In 22.1, use the following code:
+In 22.2, use the following code:
 
 ```cs
- .dxbl-listbox-empty-data-item {
+.myComboBox .dxbl-listbox-empty-data-item {
         color: transparent;
         width: 300px;
-        user-select: none;
-    }
-    .dxbl-listbox-empty-data-item:before {
-            position: absolute;
-            content: 'Custom text';
-            color: #212529;
-            font: inherit;
-            width: 100%;
-            left: 0;
+        user-select:none;
     }
 
-<DxComboBox Data="@MyList"   FilteringMode="@DataGridFilteringMode.Contains"   AllowUserInput="true">
+  .myComboBox .dxbl-listbox-empty-data-item:before {
+        position: absolute;
+        content: 'Custom text';
+        color: #212529;
+        font: inherit;
+        width: 100%;
+        left: 0;
+    }
+
+<DxComboBox Data="@MyList"   DropDownCssClass="myComboBox" >
 </DxComboBox>
 ```
 [Return to the table of contents.](#thetableofcontents)
