@@ -535,7 +535,7 @@ In v22.2, use the following CSS rule:
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
-<DxCalendar SelectedDate="@DateStart"></DxCalendar>
+<DxCalendar CssClass="myClass" SelectedDate="@DateStart"></DxCalendar>
 
 @code {
     public DateTime DateStart { get; set; } = DateTime.Now;
@@ -545,7 +545,7 @@ In both v22.1 and v22.2, use the same razor code:
 In v19.2, use the following CSS rule:
 
 ```css
-.dxbs-calendar td:not(.dxbs-day) {
+.myClass .dxbs-calendar td:not(.dxbs-day) {
     display: none;
 }
 
@@ -553,10 +553,10 @@ In v19.2, use the following CSS rule:
 In v22.2, use the following CSS rule:
 
 ```css
-.dxbl-calendar-week-number {
-    display: none;
-}
-
+    .myClass .dxbl-calendar-week-number,
+    .myClass .dxbl-calendar-days-of-week th:first-child {
+        display: none;
+    }
 ```
 [Return to the table of contents.](#thetableofcontents)
 
