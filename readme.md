@@ -3,6 +3,7 @@
 - [Most common customizations](#most-common-customizations)
   - [DxGrid](#dxgrid)
     - [Hide vertical lines](#hide-vertical-lines)
+    - [Prevent caption wrapping](#prevent-caption-wrapping)
     - [Color alternate rows](#color-alternate-rows)
     - [Place a scrollable DxGrid into DxPopup](#place-a-scrollable-dxgrid-into-dxpopup)
   - [DxToolbar](#dxtoolbar)
@@ -89,6 +90,64 @@ In v22.2, use the following CSS rules:
     }
 
 ```
+[Return to the table of contents.](#thetableofcontents)
+
+### Prevent caption wrapping
+The universal approach to prevent caption wrapping is to handle the CustomizeElement event:
+```cs
+<style>
+    .custom-header-cell {
+        white-space: nowrap;
+    }
+</style>
+
+@if (forecasts == null) {
+    <p><em>Loading...</em></p>
+}
+else {
+    <DxGrid Data="@forecasts"
+        CssClass="myGrid" ColumnResizeMode="GridColumnResizeMode.NextColumn"
+        CustomizeElement="OnCustomizeElement">
+        <Columns>
+            <DxGridDataColumn Caption="Date" FieldName="Date" />
+            <DxGridDataColumn Caption="Temperature Long Caption" FieldName="TemperatureF" />
+        </Columns>
+    </DxGrid>
+}
+
+@code {
+    private WeatherForecast[]? forecasts;
+
+    void OnCustomizeElement(GridCustomizeElementEventArgs args) {
+        if (args.ElementType == GridElementType.HeaderCell) {
+            args.CssClass = "custom-header-cell";
+        }
+    }
+    protected override async Task OnInitializedAsync() {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+    }
+}
+```
+In the same time, you can use the mentioned CSS solution.
+
+In v22.1, use the following CSS rules:
+```css
+.myGrid .dxbs-grid-header-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+```
+In v22.2, use the following CSS rules:
+```css
+.myGrid .dxbl-grid-header-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+```
+
+
 [Return to the table of contents.](#thetableofcontents)
 
 ### Color alternate rows
@@ -351,6 +410,7 @@ In v22.2 use the following code:
     CssClass="my-textbox"
     ClearButtonDisplayMode="DataEditorClearButtonDisplayMode.Auto"></DxTextBox>
 ```
+[Return to the table of contents.](#thetableofcontents)
 
 ### DxComboBox 
 
