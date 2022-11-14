@@ -12,6 +12,7 @@
   - [DxScheduler](#dxscheduler)
     - [Change an edit form width](#change-an-edit-form-width)
   - [DxEditors](#dxeditors)
+    - [Modify the Clear button](#modify-the-clear-button)
     - [DxComboBox](#dxcombobox)
       - [Modify the "No data to display" message](#modify-the-no-data-to-display-message)
     - [DxDateEdit](#dxdateedit)
@@ -324,6 +325,32 @@ In v22.2, use the following CSS rules:
 [Return to the table of contents.](#thetableofcontents)
 
 ## DxEditors
+
+### Modify the Clear button
+In v22.1 use the following code:
+```cs
+<style type="text/css">
+    .my-textbox .dxbs-editor-clear-btn {
+        color: red;
+    }
+</style>
+<DxTextBox 
+    Text="123"
+    CssClass="my-textbox"
+    ClearButtonDisplayMode="DataEditorClearButtonDisplayMode.Auto"></DxTextBox>
+```
+In v22.2 use the following code:
+```cs
+<style type="text/css">
+    .my-textbox .dxbl-edit-btn-clear {
+        color: red;
+    }
+</style>
+<DxTextBox 
+    Text="123"
+    CssClass="my-textbox"
+    ClearButtonDisplayMode="DataEditorClearButtonDisplayMode.Auto"></DxTextBox>
+```
 
 ### DxComboBox 
 
