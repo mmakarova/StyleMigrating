@@ -130,7 +130,7 @@ else {
     }
 }
 ```
-In the same time, you can use the mentioned CSS solution.
+You can achieve the same result with the following CSS rules.
 
 In v22.1, use the following CSS rules:
 ```css
