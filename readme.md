@@ -7,26 +7,26 @@
     - [Color alternate rows](#color-alternate-rows)
     - [Place a scrollable DxGrid into DxPopup](#place-a-scrollable-dxgrid-into-dxpopup)
   - [DxToolbar](#dxtoolbar)
-    - [Center a toolbar item content](#center-a-toolbar-item-content)
+    - [Center toolbar item content](#center-toolbar-item-content)
   - [DxTabs](#dxtabs)
-    - [Make tabs rounded](#make-tabs-rounded)
+    - [Create rounded tabs](#create-rounded-tabs)
   - [DxScheduler](#dxscheduler)
-    - [Change an edit form width](#change-an-edit-form-width)
+    - [Change edit form width](#change-edit-form-width)
   - [DxEditors](#dxeditors)
     - [Modify the Clear button](#modify-the-clear-button)
     - [DxComboBox](#dxcombobox)
-      - [Modify the "No data to display" message](#modify-the-no-data-to-display-message)
+      - [Modify "No data to display" message](#modify-no-data-to-display-message)
     - [DxDateEdit](#dxdateedit)
-      - [Hide a a date picker button](#hide-a-a-date-picker-button)
+      - [Hide the date picker button](#hide-the-date-picker-button)
       - [Localize the Time section scroll picker's text](#localize-the-time-section-scroll-pickers-text)
-      - [Highlight a week on a mouse hover](#highlight-a-week-on-a-mouse-hover)
+      - [Highlight a week on mouse hover](#highlight-a-week-on-mouse-hover)
     - [DxCalender](#dxcalender)
-      - [Change a font color of weekend](#change-a-font-color-of-weekend)
-      - [Hide a week number](#hide-a-week-number)
-      - [Hide a footer](#hide-a-footer)
-      - [Hide the Today button of a footer](#hide-the-today-button-of-a-footer)
+      - [Change font color of weekends](#change-font-color-of-weekends)
+      - [Hide week numbers](#hide-week-numbers)
+      - [Hide the footer](#hide-the-footer)
+      - [Hide the footer's Today button](#hide-the-footers-today-button)
   - [DxPopup](#dxpopup)
-    - [Customize the Close header button's icon](#customize-the-close-header-buttons-icon)
+    - [Customize the Close header's button icon](#customize-the-close-headers-button-icon)
 
 # How to update CSS styles to v22.2
 
@@ -93,7 +93,9 @@ In v22.2, use the following CSS rules:
 [Return to the table of contents.](#thetableofcontents)
 
 ### Prevent caption wrapping
-The universal approach to prevent caption wrapping is to handle the CustomizeElement event:
+
+To prevent caption wrapping (universal approach), handle the CustomizeElement event:
+
 ```cs
 <style>
     .custom-header-cell {
@@ -152,7 +154,7 @@ In v22.2, use the following CSS rules:
 
 ### Color alternate rows
 
-The universal approach to color alternate rows is to handle the CustomizeElement event:
+To color alternate rows (universal approach), handle the CustomizeElement event:
 
 ```cs
 <style>
@@ -183,8 +185,8 @@ The universal approach to color alternate rows is to handle the CustomizeElement
 }
 ```
 
-At the samle time, to color DxGrid rows without the master-detail relationship and grouping. 
-In v22.2, use the following CSS rule:
+If your DxGrid does not display master-detail relationships and does not use the Grid’s grouping capabilities, use the following v22.2 CSS rule:
+
 ```cs
 <style>
     .my-grid .dxbl-grid-table > tbody > tr:nth-child(2n+1) {
@@ -246,7 +248,7 @@ In v22.2, use the following code:
 
 ## DxToolbar
 
-### Center a toolbar item content
+### Center toolbar item content
 
 In both v22.1 and v22.2, use the same razor code:
 
@@ -307,7 +309,7 @@ In v22.2, use the following CSS rules:
 
 ## DxTabs
 
-### Make tabs rounded
+### Create rounded tabs
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -363,7 +365,7 @@ In v22.2, use the follwing CSS rules:
 
 ## DxScheduler
 
-### Change an edit form width
+### Change edit form width
 
 In v22.1, use the following CSS rules:
 
@@ -414,7 +416,7 @@ In v22.2 use the following code:
 
 ### DxComboBox 
 
-#### Modify the "No data to display" message
+#### Modify "No data to display" message
 
 In v19.2 use the following code:
 
@@ -438,7 +440,7 @@ In v19.2 use the following code:
 </DxComboBox>
 ```
 
-In 22.2, use the following code:
+In v22.2, use the following code:
 
 ```cs
 .myComboBox .dxbl-listbox-empty-data-item {
@@ -463,11 +465,11 @@ In 22.2, use the following code:
 
 ### DxDateEdit 
 
-Internally, we use DxCalendar in the DxDateEdit popup. So, if you need to apply a style to DxCalendar of the DxDateEdit popup, you can write selectors for DxCalendar. To write a selector for a specific DxDateEdit, assign the DxDateEdit.DropDownCssClass property.
+Internally, we use DxCalendar in the DxDateEdit popup. As such, when you need to apply a style to DxCalendar in the DxDateEdit popup, you can write selectors for DxCalendar itself. To write a selector for a specific DxDateEdit, assign the DxDateEdit.DropDownCssClass property.
 
 [Return to the table of contents.](#thetableofcontents)
 
-#### Hide a a date picker button
+#### Hide the date picker button
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -478,7 +480,7 @@ In both v22.1 and v22.2, use the same razor code:
 }
 ```
 
-In 22.1, use the following CSS rule:
+In v22.1, use the following CSS rule:
 
 ```css
 .my-editor-readonly .dxbs-editor-input-container > input {
@@ -513,7 +515,7 @@ In both v22.1 and v22.2, use the same razor code:
     }
 }
 ```
-In 22.1, use the following script:
+In v22.1, use the following script:
 
 ```js
 var dropDownBody, localizedHour, localizedMinute,localizedSecond;
@@ -560,7 +562,7 @@ function updateRoller(hour, minute, second) {
 ```
 [Return to the table of contents.](#thetableofcontents)
 
-#### Highlight a week on a mouse hover
+#### Highlight a week on mouse hover
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -590,7 +592,7 @@ In v22.2, use the following CSS rule:
 
 ### DxCalender
 
-#### Change a font color of weekend
+#### Change font color of weekends
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -619,7 +621,7 @@ In v22.2, use the following CSS rule:
 ```
 [Return to the table of contents.](#thetableofcontents)
 
-#### Hide a week number
+#### Hide week numbers
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -648,7 +650,7 @@ In v22.2, use the following CSS rule:
 ```
 [Return to the table of contents.](#thetableofcontents)
 
-#### Hide a footer
+#### Hide the footer
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -677,7 +679,7 @@ In v22.2, use the following CSS rule:
 ```
 [Return to the table of contents.](#thetableofcontents)
 
-#### Hide the Today button of a footer
+#### Hide the footer's Today button
 
 In both v22.1 and v22.2, use the same razor code:
 ```cs
@@ -708,7 +710,7 @@ In v22.2, use the following CSS rule:
 
 ## DxPopup
 
-### Customize the Close header button's icon
+### Customize the Close header's button icon
 
 In both v22.1 and v22.2, use the same razor code:
 
